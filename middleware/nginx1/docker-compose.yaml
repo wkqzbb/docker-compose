@@ -7,10 +7,10 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./conf:/etc/nginx/  # 指定 conf 文件夹的路径
-#      - ./certs:/etc/nginx/certs  # 指定证书文件夹的路径
-#      - ./html:/usr/share/nginx/html  # 指定静态文件夹的路径
-#      - ./logs:/var/log/nginx  # 指定日志文件夹的路径
+      - ./conf:/etc/nginx  # 指定 conf 文件夹的路径
+      - ./certs:/etc/nginx/certs  # 指定证书文件夹的路径
+      - ./html:/usr/share/nginx/html  # 指定静态文件夹的路径
+      - ./logs:/var/log/nginx  # 指定日志文件夹的路径
     networks:
       - nginx1
 networks:
