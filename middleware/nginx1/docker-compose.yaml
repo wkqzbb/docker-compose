@@ -1,0 +1,13 @@
+version: '3'
+services:
+  nginx1:
+    image: nginx:latest
+    container_name: nginx1
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./conf:/etc/nginx/conf.d  # 指定 conf 文件夹的路径
+      - ./certs:/etc/nginx/certs  # 指定证书文件夹的路径
+    networks:
+      - nginx1
