@@ -6,7 +6,7 @@ services:
     ports:
       - "80:80"
       - "443:443"
-    volumes:
+#    volumes:
 #      - ./conf:/etc/nginx/conf.d  # 指定 conf 文件夹的路径
 #      - ./certs:/etc/nginx/certs  # 指定证书文件夹的路径
 #      - ./html:/usr/share/nginx/html  # 指定静态文件夹的路径
