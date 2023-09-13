@@ -9,6 +9,10 @@ services:
     volumes:
       - ./conf:/etc/nginx/conf.d  # 指定 conf 文件夹的路径
       - ./certs:/etc/nginx/certs  # 指定证书文件夹的路径
-      - ./html:/etc/nginx/html  # 指定证书文件夹的路径
+      - ./html:/usr/share/nginx/html  # 指定静态文件夹的路径
+      - ./logs:/var/log/nginx  # 指定日志文件夹的路径
     networks:
       - nginx1
+networks:
+  nginx1:
+    driver: bridge
