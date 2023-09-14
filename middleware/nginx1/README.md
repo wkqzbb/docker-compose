@@ -20,6 +20,13 @@ docker-compose up -d --build
 └── docker-compose.yml
 
 
+如果修改了 nginx.conf 文件，您需要重新加载 Nginx 配置，而不仅仅是重新启动容器。
+
+```bash
+docker exec nginx nginx -s reload
+```
+
+
 ## nginx.conf
 
 * user nobody : 配置 nginx 的进程用户
