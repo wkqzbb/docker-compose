@@ -19,6 +19,7 @@ docker-compose up -d --build
 │ └── your_certificate_files
 └── docker-compose.yml
 
+
 ## nginx.conf
 
 * user nobody : 配置 nginx 的进程用户
