@@ -4,8 +4,7 @@ services:
     image: openresty/openresty:alpine-fat
     container_name: openresty1
     ports:
-      - "80:80"
-      - "443:443"
+      - "60000:60000"
     volumes:
       - ./logs:/usr/local/openresty/nginx/logs
       - ./html:/usr/local/openresty/nginx/html
