@@ -10,7 +10,7 @@ services:
       - ./logs:/usr/local/openresty/nginx/logs
       - ./html:/usr/local/openresty/nginx/html
       - ./lua:/usr/local/openresty/nginx/lua
-      - ./conf:/usr/local/openresty/nginx/conf/nginx.conf
+      - ./conf:/usr/local/openresty/nginx/conf
     restart: always
 networks:
   openresty1:
