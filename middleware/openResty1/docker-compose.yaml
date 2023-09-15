@@ -34,7 +34,7 @@ services:
     volumes:
       - ./logs:/usr/local/openresty/nginx/logs
       - ./html:/usr/local/openresty/nginx/html
-      - ./lua:/lua
+      - ./lua:/usr/local/openresty/nginx/lua
       - ./conf:/usr/local/openresty/nginx/conf
     restart: always
     networks:
