@@ -37,7 +37,7 @@ http {
          # 定义返回的数据类型
          default_type 'application/json';
          # 返回的数据内容从哪里来
-         content_by_lua_file /usr/local/openresty/nginx/lua/test.lua;
+         content_by_lua_file /usr/local/openresty/nginx/lua/resume.lua;
     }
 ```
 然后在 `/usr/local/openresty/nginx/lua` 目录下创建一个 test.lua 文件
