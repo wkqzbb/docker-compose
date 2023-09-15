@@ -4,14 +4,42 @@ services:
     image: openresty/openresty:alpine-fat
     container_name: openresty1
     ports:
-      - "60001:60001"
+      - "60001:60000"
     volumes:
       - ./logs:/usr/local/openresty/nginx/logs
       - ./html:/usr/local/openresty/nginx/html
       - ./lua:/usr/local/openresty/nginx/lua
       - ./conf:/usr/local/openresty/nginx/conf
     restart: always
+    networks:
+      - openresty
+  openresty2:
+    image: openresty/openresty:alpine-fat
+    container_name: openresty2
+    ports:
+      - "60002:60000"
+    volumes:
+      - ./logs:/usr/local/openresty/nginx/logs
+      - ./html:/usr/local/openresty/nginx/html
+      - ./lua:/usr/local/openresty/nginx/lua
+      - ./conf:/usr/local/openresty/nginx/conf
+    restart: always
+    networks:
+      - openresty
+  openresty3:
+    image: openresty/openresty:alpine-fat
+    container_name: openresty3
+    ports:
+      - "60003:60000"
+    volumes:
+      - ./logs:/usr/local/openresty/nginx/logs
+      - ./html:/usr/local/openresty/nginx/html
+      - ./lua:/usr/local/openresty/nginx/lua
+      - ./conf:/usr/local/openresty/nginx/conf
+    restart: always
+    networks:
+      - openresty
 networks:
-  openresty1:
+  openresty:
     driver: bridge
 
