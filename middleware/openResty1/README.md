@@ -31,3 +31,25 @@ http {
 ```
 此时就可以在 nginx.conf 中使用 lua 了，可以写到 server 中，也可以写到 location 中
 ```bash
+<<<<<<< HEAD
+=======
+    location / {
+         proxy_pass http://backend; # 通过代理转发请求
+         # 使用 lua 编写自定义逻辑
+         # 定义返回的数据类型
+         default_type 'application/json';
+         # 返回的数据内容从哪里来
+         content_by_lua_file /usr/local/openresty/nginx/lua/resume.lua;
+    }
+```
+然后在 `/usr/local/openresty/nginx/lua` 目录下创建一个 test.lua 文件
+```lua
+-- test.lua ngx.say 表示响应
+ngx.say("{"status":5711,"msg":"这是通过openresty自定义！","success":false,"data":null}")
+```
+
+然后重现构建镜像，启动容器
+```bash
+docker-compose up -d --build
+```
+>>>>>>> 4deddd026b9fe85f86af9e4e826425370e461f49
