@@ -3,6 +3,8 @@
 ```bash
 # 启动
 docker-compose up -d
+# 
+docker cp openresty:/usr/local/openresty /opt/docker/
 ```
 
 ## 说明
