@@ -33,7 +33,10 @@ http {
 ```bash
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 4deddd026b9fe85f86af9e4e826425370e461f49
 =======
 >>>>>>> 4deddd026b9fe85f86af9e4e826425370e461f49
     location / {
@@ -56,6 +59,9 @@ ngx.say("{"status":5711,"msg":"这是通过openresty自定义！","success":fals
 docker-compose up -d --build
 ```
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 4deddd026b9fe85f86af9e4e826425370e461f49
+=======
 >>>>>>> 4deddd026b9fe85f86af9e4e826425370e461f49
 =======
 >>>>>>> 4deddd026b9fe85f86af9e4e826425370e461f49
