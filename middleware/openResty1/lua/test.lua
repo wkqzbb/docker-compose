@@ -1,1 +1,1 @@
-{"status":500,"msg":"今天已经刷新了6次，本日刷新次数已达上限！","success":false,"data":null}
+ngx.say("{"status":5711,"msg":"这是通过openresty自定义！","success":false,"data":null}")
