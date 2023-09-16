@@ -4,4 +4,4 @@
 -- 请求方法
 --ngx.say("请求方法: ", ngx.req.get_method());
 -- 获取原始请求头信息
-ngx.say("原始请求头信息: ", cjson.encode(ngx.req.raw_header()));
+ngx.say("原始请求头信息: " .. ngx.req.raw_header());
