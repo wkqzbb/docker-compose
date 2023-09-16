@@ -2,4 +2,6 @@
  -- http 协议版本
 --ngx.say("HTTP协议版本: ", ngx.req.http_version());
 -- 请求方法
-ngx.say("请求方法: ", ngx.req.get_method());
+--ngx.say("请求方法: ", ngx.req.get_method());
+-- 获取原始请求头信息
+ngx.say("原始请求头信息: ", cjson.encode(ngx.req.get_headers()));
