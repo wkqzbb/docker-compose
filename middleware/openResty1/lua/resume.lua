@@ -7,12 +7,12 @@
 --ngx.say("原始请求头信息: " .. ngx.req.raw_header());
 -- 获取请求头信息
 local myHeader = ngx.req.get_headers();
-ngx.say("token" .. myHeader["token"]);
-ngx.say("uid" .. myHeader["uid"]);
+ngx.say("token：" .. myHeader["token"]);
+ngx.say("uid：" .. myHeader["uid"]);
 -- 获取请求参数
 local args = ngx.req.get_uri_args();
-ngx.say("userId" .. args["userId"]);
-ngx.say("resumeId" .. args["resumeId"]);
+ngx.say("userId：" .. args["userId"]);
+ngx.say("resumeId：" .. args["resumeId"]);
 -- 获取 form 参数
 local postArgs = ngx.req.get_post_args();
 ngx.say("打印请求体参数");
