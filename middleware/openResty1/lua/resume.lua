@@ -14,3 +14,8 @@ local args = ngx.req.get_uri_args();
 ngx.say("userId" .. args["userId"]);
 ngx.say("resumeId" .. args["resumeId"]);
 -- 获取 form 参数
+local postArgs = ngx.req.get_post_args();
+ngx.say("打印请求体参数");
+for key,value in pairs(postArgs) do
+    ngx.say(key .. "=" .. value);
+end
