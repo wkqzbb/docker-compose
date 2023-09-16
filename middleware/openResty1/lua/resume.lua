@@ -9,3 +9,8 @@
 local myHeader = ngx.req.get_headers();
 ngx.say("token" .. myHeader["token"]);
 ngx.say("uid" .. myHeader["uid"]);
+-- 获取请求参数
+local args = ngx.req.get_uri_args();
+ngx.say("userId" .. args["userId"]);
+ngx.say("resumeId" .. args["resumeId"]);
+-- 获取 form 参数
