@@ -13,9 +13,7 @@ ngx.say("uid：" .. myHeader["uid"]);
 local args = ngx.req.get_uri_args();
 ngx.say("userId：" .. args["userId"]);
 ngx.say("resumeId：" .. args["resumeId"]);
--- 获取 form 参数
-local postArgs = ngx.req.read_body();
-ngx.say("打印请求体参数");
-for key,value in pairs(postArgs) do
-    ngx.say(key .. "=" .. value);
-end
+-- 获得 json 的请求体
+ngx.req.read_body();
+local bodyData = ngx.req.get_body_data();
+ngx.say(bodyData);
