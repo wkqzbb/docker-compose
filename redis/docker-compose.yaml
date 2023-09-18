@@ -8,7 +8,6 @@ services:
     volumes:
       - ./data:/data
     user: "1000:1000" # 使用特定的用户和用户组运行容器
-    command: redis-server /usr/local/etc/redis/redis.conf
     restart: always
     networks:
       - redis
