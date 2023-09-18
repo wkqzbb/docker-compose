@@ -89,3 +89,12 @@ proxy_buffers: 设置代理服务器（nginx）读取上游响应的第二部分
 proxy_busy_buffers_size: 设置代理服务器（nginx）可以使用的内存大小，用于保存上游响应的第一部分和第二部分
 
 
+## Nginx 跨域配置
+
+```editorconfig
+            # 跨域请求配置，允许所有来源，允许跨域请求包含任何头信息，允许跨域请求的方法，设置预检请求的有效期
+            add_header "Access-Control-Allow-Origin" "*";
+            add_header "Access-Control-Allow-Headers" "*";
+            add_header "Access-Control-Allow-Methods" "*";
+            add_header "Access-Control-Allow-Credentials" "true";
+```
