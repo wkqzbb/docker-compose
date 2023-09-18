@@ -1,0 +1,17 @@
+version: '3'
+services:
+  portainer:
+    image: portainer/portainer
+    ports:
+      - 9000:9000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./data:/data
+      - /etc/localtime:/etc/localtime:ro # 使用宿主机的时区
+      - /etc/timezone:/etc/timezone:ro # 使用宿主机的时区
+    restart: always
+    networks:
+      - portainer
+networks:
+  portainer:
+    driver: bridge
