@@ -9,7 +9,6 @@ services:
       - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     volumes:
       - ./data:/usr/share/elasticsearch/data
-      - ./config:/usr/share/elasticsearch/config
       - ./plugins:/usr/share/elasticsearch/plugins
     restart: always
     ports:
