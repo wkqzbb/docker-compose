@@ -1,8 +1,8 @@
-version: '3'
+version: '3.7'
 services:
   rabbitmq:
-    image: rabbitmq:3-management
-    container_name: rabbitmq3
+    image: "rabbitmq:latest"
+    container_name: rabbitmq
     ports:
       - "5672:5672"
       - "15672:15672"
@@ -12,6 +12,7 @@ services:
     environment:
       - RABBITMQ_DEFAULT_USER=admin
       - RABBITMQ_DEFAULT_PASS=admin
+      - RABBITMQ_PLUGINS=rabbitmq_delayed_message_exchange
     networks:
       - rabbitmq-network
 
