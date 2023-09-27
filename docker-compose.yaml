@@ -1,0 +1,37 @@
+version: '3'
+services:
+  nacos:
+    image: nacos/nacos-server:latest
+    container_name: nacos-server
+    environment:
+      - PREFER_HOST_MODE=hostname
+      - MODE=standalone
+      - SPRING_DATASOURCE_PLATFORM=mysql
+      - MYSQL_SERVICE_HOST=my-net
+      - MYSQL_SERVICE_PORT=3307
+      - MYSQL_SERVICE_USER=hire
+      - MYSQL_SERVICE_PASSWORD=hire
+    ports:
+      - "8848:8848"
+    networks:
+      - my-net
+    restart: always
+  mysql:
+    image: mysql:latest
+    container_name: mysql-server
+    environment:
+      MYSQL_ROOT_PASSWORD: Zbb010719!
+      MYSQL_ROOT_HOST: "%"
+      MYSQL_USER: hire
+      MYSQL_PASSWORD: hire
+      MYSQL_PORT: 3307
+      MYSQL_ALLOW_EMPTY_PASSWORD: "no"
+    command: --binlog-do-db=mysql
+    networks:
+        - my-net
+    ports:
+      - "3306:3306"
+    restart: always
+networks:
+  my-net:
+    driver: bridge
